@@ -1,12 +1,12 @@
-name: build
+name: run-trivy
 on:
   push:
     branches:
     - main
   pull_request:
 jobs:
-  build:
-    name: Build
+  run-trivy:
+    name: run-trivy
     runs-on: ubuntu-20.04
     steps:
     - name: Checkout code
