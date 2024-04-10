@@ -10,8 +10,6 @@ jobs:
     runs-on: self-hosted
 
     steps:
-      - name: setup-docker
-        uses: docker-practice/actions-setup-docker@v1
       - name: Clone repo
         uses: actions/checkout@master
       - name: tfsec
