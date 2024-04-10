@@ -1,12 +1,12 @@
-name: run-trivy
+name: trivy-ci-checks
 on:
   push:
     branches:
     - main
   pull_request:
 jobs:
-  run-trivy:
-    name: run-trivy
+  trivy-ci-checks:
+    name: trivy-ci-checks
     runs-on: ubuntu-20.04
     steps:
     - name: Checkout code
@@ -17,4 +17,4 @@ jobs:
       with:
         scan-type: 'fs'
         scan-ref: '.'
-        trivy-config: trivy.yaml
+        trivy-config: trivy-ci-checks.yml
