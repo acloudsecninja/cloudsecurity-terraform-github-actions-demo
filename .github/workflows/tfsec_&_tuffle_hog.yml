@@ -1,12 +1,12 @@
-name: tfsec
+name: tfsec-and-trufflehog
 on:
   push:
     branches:
       - main
   pull_request:
 jobs:
-  tfsec:
-    name: tfsec
+  tfsec-and-trufflehog:
+    name: tfsec-and-trufflehog
     runs-on: ubuntu-latest
 
     steps:
