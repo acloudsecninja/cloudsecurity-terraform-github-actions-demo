@@ -12,5 +12,7 @@ jobs:
     steps:
       - name: Clone repo
         uses: actions/checkout@master
+      - name: TruffleHog OSS
+        uses: trufflesecurity/trufflehog@v3.72.0
       - name: tfsec
         uses: aquasecurity/tfsec-action@v1.0.0
