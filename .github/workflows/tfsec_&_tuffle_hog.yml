@@ -10,9 +10,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      ## Clone Repo ##
       - name: Clone repo
         uses: actions/checkout@master
+        ## Check for Secrets and passwords ## 
       - name: TruffleHog OSS
         uses: trufflesecurity/trufflehog@v3.72.0
+        ## Scan for tfsec misconfigurations ##
       - name: tfsec
         uses: aquasecurity/tfsec-action@v1.0.3
+        ## Configure AWS Credentials ## 
+      - name: "Configure AWS Credentials"
+        uses: aws-actions/configure-aws-credentials@v4.0.2
+        
