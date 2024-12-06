@@ -19,12 +19,12 @@ resource "aws_s3_bucket" "example123412312" {
     Environment = "nprd"
   }
 }
-
-resource "aws_s3_bucket_public_access_block" "example123412312" {
-  bucket = aws_s3_bucket.example123412312.id
-
-  block_public_acls       = true
-  block_public_policy     = true
-  ignore_public_acls      = true
-  restrict_public_buckets = true
-}
+## This is example of fixing a trivy finding and can be shown as an example to students
+#resource "aws_s3_bucket_public_access_block" "example123412312" {
+#  bucket = aws_s3_bucket.example123412312.id
+#
+#  block_public_acls       = true
+#  block_public_policy     = true
+#  ignore_public_acls      = true
+#  restrict_public_buckets = true
+#}
